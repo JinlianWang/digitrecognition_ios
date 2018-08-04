@@ -1,3 +1,7 @@
+Note by Sunny -
+
+Use Keras 2.1.3 and Tensorflow 1.5 to train the model. The model does not handle digitals written on corners of the area. Probably a good experiment to see whether image augumentation techniques would be able to help improving it. 
+
 # Handwritten digit recognition with Keras/MNIST on iOS
 
 
