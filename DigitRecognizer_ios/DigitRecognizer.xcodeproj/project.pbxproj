@@ -16,6 +16,7 @@
 		35D856981F430A7000D36D61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D856971F430A7000D36D61 /* main.m */; };
 		35D856A01F43166C00D36D61 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D8569F1F43166C00D36D61 /* Vision.framework */; };
 		35D856A21F43168200D36D61 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D856A11F43168100D36D61 /* CoreML.framework */; };
+		E15FDBD821165ED30022B26A /* sunny_mnist_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E15FDBD721165ED30022B26A /* sunny_mnist_model.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		35D856971F430A7000D36D61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35D8569F1F43166C00D36D61 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
 		35D856A11F43168100D36D61 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		E15FDBD721165ED30022B26A /* sunny_mnist_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sunny_mnist_model.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		35D856871F430A7000D36D61 /* DigitRecognizer */ = {
 			isa = PBXGroup;
 			children = (
+				E15FDBD721165ED30022B26A /* sunny_mnist_model.mlmodel */,
 				35ACE59B1F433AB500AF421F /* keras_mnist_cnn.mlmodel */,
 				35D856881F430A7000D36D61 /* AppDelegate.h */,
 				35D856891F430A7000D36D61 /* AppDelegate.m */,
@@ -116,12 +119,12 @@
 		35D8567D1F430A7000D36D61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = deeplearning_lukau;
 				TargetAttributes = {
 					35D856841F430A7000D36D61 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -165,6 +168,7 @@
 				35D856981F430A7000D36D61 /* main.m in Sources */,
 				35ACE59C1F433ABC00AF421F /* keras_mnist_cnn.mlmodel in Sources */,
 				35D8568A1F430A7000D36D61 /* AppDelegate.m in Sources */,
+				E15FDBD821165ED30022B26A /* sunny_mnist_model.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +208,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -211,6 +216,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -259,6 +265,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -266,6 +273,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -298,11 +306,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84ZCXK5Z7F;
 				INFOPLIST_FILE = DigitRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lukau.DigitRecognizer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunnycorp.DigitRecognizer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,11 +322,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84ZCXK5Z7F;
 				INFOPLIST_FILE = DigitRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lukau.DigitRecognizer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunnycorp.DigitRecognizer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

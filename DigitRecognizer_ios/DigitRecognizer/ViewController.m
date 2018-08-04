@@ -10,6 +10,7 @@
 #import <CoreML/CoreML.h>
 #import <Vision/Vision.h>
 #import "keras_mnist_cnn.h"
+#import "sunny_mnist_model.h"
 
 
 @interface ViewController ()
@@ -61,7 +62,7 @@
     UIImage *scaledCanvasImage = [self imageWithImage:self.drawingCanvas.image scaledToSize:CGSizeMake(28, 28)];
     self.imageToDetect = [[CIImage alloc]initWithImage:scaledCanvasImage];
     
-    MLModel *ml_model = [[[keras_mnist_cnn alloc] init] model];
+    MLModel *ml_model = [[[sunny_mnist_model alloc] init] model];
     VNCoreMLModel *vnc_core_ml_model = [VNCoreMLModel modelForMLModel: ml_model error:nil];
     
     VNCoreMLRequest *request = [[VNCoreMLRequest alloc] initWithModel: vnc_core_ml_model completionHandler: (VNRequestCompletionHandler) ^(VNRequest *request, NSError *error){
